@@ -4,8 +4,8 @@
 @scope_cobbler
 Feature: Cobbler and distribution autoinstallation
 
-  Background:
-    Given I am authorized
+  Scenario: Log in as testing user
+    Given I am authorized as "testing" with password "testing"
 
   Scenario: Ask cobbler to create a distribution via XML-RPC
     Given cobblerd is running
